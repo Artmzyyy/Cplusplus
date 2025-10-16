@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int a;
+	int b;
+	
+	cout << "Masukkan a : ";
+	cin >> a;
+	cout << "Masukkan b : "; cin >> b;
+	
+	a * a;
+	b * b;
+	cout << "Hasilnya adalah : " << a - b;
+	
+	int total = a + b;
+	int kurang = a - b;
+	cout << "Hasilnya adalah : " << total * kurang ;
+	
+}
