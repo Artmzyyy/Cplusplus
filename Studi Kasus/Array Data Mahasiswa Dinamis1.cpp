@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>		//array dinamis tanpa class
 #include <string>
 using namespace std;
 
@@ -44,3 +44,4 @@ int main(){
 	}
 	
 }
+
