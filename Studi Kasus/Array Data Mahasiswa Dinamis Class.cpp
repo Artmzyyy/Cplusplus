@@ -70,5 +70,4 @@ int main() {
     
     cout << "\nTampilan setelah di Sorting\n" << endl;
 	dt.tampil();
-}
-
+};
