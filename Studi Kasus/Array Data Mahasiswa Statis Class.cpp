@@ -13,7 +13,7 @@ struct Mahasiswa {
 class Data {
 	public: 
 	int n;
-	Mahasiswa mhs[100];
+	Mahasiswa mhs[100];		//struct sudah masuk class, tidak perlu dipanggil di main
 	
 	void tampil(){
 		for(int i = 0; i < n; i++){
@@ -29,7 +29,7 @@ class Data {
 		for(int i = 0; i < n - 1; i++){
 			for(int j = 0; j < n - i - 1; j++){
 				if(mhs[j].nama > mhs[j+1].nama){
-					swap(mhs[j], mhs[j+1]);
+					swap(mhs[j], mhs[j+1]);  //menggunakan function bawaan yaitu swap untuk sorting data 
 				}
 			}
 		}
@@ -52,3 +52,4 @@ int main(){
 	cout << "Setelah di Sorting" << endl;
 		dt.tampil();
 }
+
