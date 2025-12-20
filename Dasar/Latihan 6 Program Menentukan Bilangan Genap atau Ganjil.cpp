@@ -4,7 +4,7 @@ using namespace std;
 int main(){
 	int a;
 	
-	cout << "Masukkan angka: ";
+	cout << "Masukkan bilangan bulat: ";
 	cin >> a;
 	
 	if(a % 2 == 0){
@@ -13,3 +13,4 @@ int main(){
 		cout << a << " adalah bilangan ganjil";
 	}
 }
+
