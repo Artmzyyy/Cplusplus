@@ -4,7 +4,7 @@ using namespace std;
 int main(){
 	int a;
 	
-	cout << "Masukkan bilangan: ";
+	cout << "Masukkan bilangan bulat: ";
 	cin >> a;
 	
 	if(a  < 0 ){
@@ -15,3 +15,4 @@ int main(){
 		cout << "bilangan tidak valid";
 	}
 }
+
