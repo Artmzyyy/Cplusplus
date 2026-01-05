@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 using namespace std;
 
 struct Mobil
@@ -33,11 +34,12 @@ class InventarisKendaraan : public Kendaraan{
     void tambahMobil(string id, string merk, string ketersediaan){
         int n;
         cout << "Masukkan Banyak Mobil  : "; cin >> n;
+        cin.ignore();
         for(int i = 0; i < n; i++){
-            cout << "Masukkan ID Mobil : "; cin >> mb[i].Id;
-            cout << "Masukkan Merk Mobil : "; cin >> mb[i].Merk;
-            cout << "Masukkan Ketersediaan Mobil : "; cin >> mb[i].Ketersediaan;
-        } 
+            cout << "Masukkan ID Mobil : "; getline(cin, mb[i].Id);
+            cout << "Masukkan Merk Mobil : "; getline(cin, mb[i].Merk);
+            cout << "Masukkan Ketersediaan Mobil : "; getline(cin, mb[i].Ketersediaan);
+        }
     }
 
     void tampilMobil(){
@@ -68,8 +70,8 @@ int main(){
     string nama, password;
     b:
     cout << "=== SELAMAT DATANG SILAHKAN LOGIN TERLEBIH DAHULU ===" << endl;
-    cout << "Masukkan Nama : "; cin >> nama;
-    cout << "Masukkan Password : "; cin >> password;
+    cout << "Masukkan Nama : "; getline(cin, nama);
+    cout << "Masukkan Password : "; getline(cin, password);
     if(password == "Pria Solo"){
         cout << "Login Berhasil, Selamat Datang " << nama << endl;
         do{
@@ -92,7 +94,9 @@ int main(){
                 case 3:
                     {
                         string id;
-                        cout << "Masukkan ID Mobil yang akan dihapus: "; cin >> id;
+                        cout << "Masukkan ID Mobil yang akan dihapus: ";
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        getline(cin, id);
                         inventaris.hapusMobil(id);
                         break;
                     }
